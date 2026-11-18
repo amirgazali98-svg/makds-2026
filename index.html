@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>MAKDS 2026 | Buku Program Digital</title>
+  <style>
+    :root {
+      --hitam: #101010;
+      --emas: #D4AF37;
+      --kuning: #FFE52B;
+      --krim: #FFF8E7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--hitam);
+      color: var(--krim);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 100svh;
+      padding: 35px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(
+        circle at top, #4a3918, #101010 70%
+      );
+    }
+    .arch {
+      border: 2px solid var(--emas);
+      border-radius: 140px 140px 20px 20px;
+      padding: 45px 18px 35px;
+      width: 100%;
+      max-width: 520px;
+    }
+    .school {
+      color: var(--emas);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      color: var(--emas);
+      font-size: clamp(30px, 8vw, 48px);
+      line-height: 1.15;
+    }
+    .year { color: var(--kuning); }
+    .theme { color: var(--emas); font-style: italic; }
+    button {
+      background: var(--emas);
+      color: var(--hitam);
+      padding: 14px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px 18px 90px;
+    }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-family: Georgia, serif;
+      color: var(--emas);
+    }
+    .card {
+      background: #211e19;
+      border: 1px solid #735b2e;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 12px 0;
+    }
+    .time {
+      color: var(--kuning);
+      font-weight: bold;
+    }
+    nav {
+      position: sticky;
+      bottom: 0;
+      background: #1b1915;
+      border-top: 1px solid var(--emas);
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 4px;
+    }
+    nav a {
+      color: var(--krim);
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .note { color: #d4c9af; font-size: 13px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="utama">
+  <div class="arch">
+    <p class="school">
+      KAFA SEKOLAH KEBANGSAAN JALAN KUANTAN 2
+    </p>
+    <p>✦ ۞ ✦</p>
+    <h1>
+      MAJLIS ANUGERAH<br>
+      KECEMERLANGAN<br>
+      DINIAH & SAHSIAH<br>
+      <span class="year">MAKDS 2026</span>
+    </h1>
+    <p class="theme">
+      Kecemerlangan Ilmu, Keunggulan Sahsiah
+    </p>
+    <p>28 November 2026 (Sabtu)</p>
+    <p>
+      Dewan Saidina Abu Bakar<br>
+      SK Jalan Kuantan 2, Kuala Lumpur
+    </p>
+    <button onclick="masuk()">
+      Masuk Buku Program →
+    </button>
+  </div>
+</header>
+
+<main id="buku">
+  <section>
+    <h2>Selamat Datang</h2>
+    <div class="card">
+      <p>
+        Selamat datang ke Majlis Anugerah
+        Kecemerlangan Diniah dan Sahsiah
+        (MAKDS) 2026.
+      </p>
+      <p>
+        Perasmi: Encik Azrani Effendi,
+        Yang Dipertua PIBG.
+      </p>
+    </div>
+  </section>
+
+  <section id="objektif">
+    <h2>Objektif Majlis</h2>
+    <div class="card">
+      <p>✦ Menghargai kecemerlangan murid.</p>
+      <p>✦ Meningkatkan semangat menuntut ilmu.</p>
+      <p>✦ Mengukuhkan penguasaan pembelajaran.</p>
+      <p>✦ Menggalakkan peningkatan prestasi.</p>
+    </div>
+  </section>
+
+  <section id="aturcara">
+    <h2>Atur Cara Majlis</h2>
+    <p class="note">
+      Masa berikut ialah draf dan tertakluk
+      kepada pengesahan penganjur.
+    </p>
+    <div id="jadual"></div>
+  </section>
+
+  <section id="anugerah">
+    <h2>Kategori Anugerah</h2>
+    <div class="card">
+      <p>Pencapaian Terbaik Dalam Kelas</p>
+      <p>Pencapaian Terbaik Mata Pelajaran</p>
+      <p>Pencapaian Terbaik Keseluruhan</p>
+      <p>Peningkatan Prestasi</p>
+      <p>Pelajar Terbaik UPSRA dan UPKK</p>
+      <p>Kehadiran dan Sahsiah Terbaik</p>
+      <p>Tokoh Pelajar Lelaki dan Perempuan</p>
+      <p class="note">
+        Senarai penerima: Akan Dikemas Kini
+      </p>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri dan Montaj</h2>
+    <div class="card">
+      <p>📷 Galeri: Akan Dikemas Kini</p>
+      <p>▶ Video montaj: Akan Dikemas Kini</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Penghargaan</h2>
+    <div class="card">
+      <p>
+        Setinggi-tinggi penghargaan kepada
+        semua pihak yang menjayakan
+        MAKDS 2026.
+      </p>
+    </div>
+  </section>
+</main>
+
+<nav aria-label="Navigasi buku program">
+  <a href="#utama">Utama</a>
+  <a href="#objektif">Objektif</a>
+  <a href="#aturcara">Atur Cara</a>
+  <a href="#anugerah">Anugerah</a>
+  <a href="#galeri">Galeri</a>
+</nav>
+
+<script>
+  function masuk() {
+    document.getElementById("buku")
+      .scrollIntoView({ behavior: "smooth" });
+  }
+
+  const acara = [
+    ["7.30", "Pendaftaran dan ketibaan"],
+    ["8.00", "Majlis Khatam Al-Quran"],
+    ["8.30", "Ketibaan perasmi dan tetamu"],
+    ["8.45", "Doa, Asmaul Husna dan lagu rasmi"],
+    ["9.00", "Tilawah Al-Quran"],
+    ["9.15", "Ucapan dan perasmian"],
+    ["9.30", "Montaj warga KAFA"],
+    ["9.45", "Anugerah Bahagian 1"],
+    ["10.30", "Persembahan murid Tahun 6"],
+    ["10.45", "Anugerah Bahagian 2"],
+    ["11.30", "Video memori"],
+    ["11.45", "Makan tengah hari dan bersurai"]
+  ];
+
+  const jadual = document.getElementById("jadual");
+
+  acara.forEach(function(item) {
+    const kad = document.createElement("div");
+    kad.className = "card";
+    kad.innerHTML =
+      '<span class="time">' + item[0] +
+      ' pagi</span><div>' + item[1] + '</div>';
+    jadual.appendChild(kad);
+  });
+</script>
+
+</body>
+</html>
